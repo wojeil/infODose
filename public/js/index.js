@@ -37,7 +37,7 @@ $(document).ready(function () {
                 </div>
             </div>`;
 
-        //add append 
+        $("#police").append(policeCard);
         }
     })
 

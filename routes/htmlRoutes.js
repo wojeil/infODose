@@ -46,8 +46,8 @@ var db = require("../models");
   });
 
   // Render 404 page for any unmatched routes
-  router.get("*", function(req, res) {
-    res.render("404");
-  });
+  // router.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 
 module.exports = router;
