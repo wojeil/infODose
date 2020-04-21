@@ -16,11 +16,11 @@ var db = require("../models");
 
   // Load index page
   router.get("/", function(req, res) {
-    db.odstats.findAll({}).then(function(stats) {
+    //db.odstats.findAll({}).then(function(stats) {
       res.render("index", {
-        msg: "Welcome!",
-        odstats: stats
-      });
+       // msg: "Welcome!",
+        //odstats: stats
+      //});
     });
   });
 
