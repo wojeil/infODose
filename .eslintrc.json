@@ -5,40 +5,40 @@
       "node": true
   },
   "rules": {
-      "no-duplicate-case":"warn",
-      "no-empty":"warn",
-      "no-extra-semi":"warn",
-      "no-func-assign": "warn",
-      "no-irregular-whitespace":"warn",
-      "no-unreachable": "warn",
-      "curly": "warn",
-      "dot-notation": "warn",
-      "eqeqeq": "warn",
-      "no-empty-function": "warn",
-      "no-multi-spaces": "warn",
-      "no-mixed-spaces-and-tabs": "warn",
-      "no-trailing-spaces": "warn",
-      "default-case": "warn",
-      "no-fallthrough": "warn",
-      "no-unused-vars": "warn",
-      "no-use-before-define": "warn",
-      "no-redeclare": "warn",
-      "camelcase": "warn",
-      "brace-style": "warn",
+      "no-duplicate-case":"off",
+      "no-empty":"off",
+      "no-extra-semi":"off",
+      "no-func-assign": "off",
+      "no-irregular-whitespace":"off",
+      "no-unreachable": "off",
+      "curly": "off",
+      "dot-notation": "off",
+      "eqeqeq": "off",
+      "no-empty-function": "off",
+      "no-multi-spaces": "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "no-trailing-spaces": "off",
+      "default-case": "off",
+      "no-fallthrough": "off",
+      "no-unused-vars": "off",
+      "no-use-before-define": "off",
+      "no-redeclare": "off",
+      "camelcase": "off",
+      "brace-style": "off",
       "indent": [
-          "warn",
+          "off",
           2
       ],
       "linebreak-style": [
-          "warn",
+          "off",
           "unix"
       ],
       "quotes": [
-          "warn",
+          "off",
           "double"
       ],
       "semi": [
-          "warn",
+          "off",
           "always"
       ]
   }
