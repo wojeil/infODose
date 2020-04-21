@@ -13,9 +13,9 @@ const auth = require("../middleware/auth");
 //router.get("/user/register", (req, res) => res.sendFile(path.join(__dirname, "../public/register.html")));
 var db = require("../models");
 
-module.exports = function(app) {
+
   // Load index page
-  app.get("/", function(req, res) {
+  router.get("/", function(req, res) {
     db.odstats.findAll({}).then(function(stats) {
       res.render("index", {
         msg: "Welcome!",
@@ -24,7 +24,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/user/:email", function(req, res) {
+  router.get("/user/:email", function(req, res) {
     db.user.findAll({ where: { email: req.params.email } }).then(function(dbUser) {
       console.log("--------------------------------------------------");
       console.log(req.params.email);
@@ -35,7 +35,7 @@ module.exports = function(app) {
   });
 
 
-  app.get("/odstats/:id", function(req, res) {
+  router.get("/odstats/:id", function(req, res) {
     db.odstats.findOne({ where: { id: req.params.id } }).then(function(
       dbStats
     ) {
@@ -46,9 +46,8 @@ module.exports = function(app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
+  router.get("*", function(req, res) {
     res.render("404");
   });
-};
 
 module.exports = router;
