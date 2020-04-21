@@ -26,7 +26,6 @@ var db = require("../models");
 
   router.get("/user/:email", function(req, res) {
     db.user.findAll({ where: { email: req.params.email } }).then(function(dbUser) {
-      console.log("--------------------------------------------------");
       console.log(req.params.email);
       res.render("user", {
         user: dbUser
