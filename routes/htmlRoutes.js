@@ -24,15 +24,15 @@ var db = require("../models");
     });
   });
   //html rout forgetting user to main page  for ---testing--- 
-  router.get("/info", function(req, res) {
-    // db.user.findAll({ where: { } }).then(function(dbUser) {
-    //   console.log("--------------------------------------------------");
-    //   console.log(req.params.email);
-      res.render("info", {
-        // user: dbUser
-      // });
-    });
-  });
+  // router.get("/info", function(req, res) {
+  //   // db.user.findAll({ where: { } }).then(function(dbUser) {
+  //   //   console.log("--------------------------------------------------");
+  //   //   console.log(req.params.email);
+  //     res.render("info", {
+  //       // user: dbUser
+  //     // });
+  //   });
+  // });
 
   router.get("/user/register", function(req, res) {
     // db.user.findAll({ where: { } }).then(function(dbUser) {
