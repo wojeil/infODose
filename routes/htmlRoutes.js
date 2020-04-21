@@ -23,6 +23,7 @@ var db = require("../models");
       });
     });
   });
+<<<<<<< HEAD
 
   router.get("/user/:email", function(req, res) {
     db.user.findAll({ where: { email: req.params.email } }).then(function(dbUser) {
@@ -30,23 +31,53 @@ var db = require("../models");
       res.render("user", {
         user: dbUser
       });
+=======
+  //html rout forgetting user to main page  for ---testing--- 
+  router.get("/info", function(req, res) {
+    // db.user.findAll({ where: { } }).then(function(dbUser) {
+    //   console.log("--------------------------------------------------");
+    //   console.log(req.params.email);
+      res.render("info", {
+        // user: dbUser
+      // });
+>>>>>>> 7861425f33c53c65760880110ef0c86b493f7175
     });
   });
 
-
-  router.get("/odstats/:id", function(req, res) {
-    db.odstats.findOne({ where: { id: req.params.id } }).then(function(
-      dbStats
-    ) {
-      res.render("odstats", {
-        odstats: dbStats
-      });
+  router.get("/user/register", function(req, res) {
+    // db.user.findAll({ where: { } }).then(function(dbUser) {
+    //   console.log("--------------------------------------------------");
+    //   console.log(req.params.email);
+      res.render("register", {
+        // user: dbUser
+      // });
     });
   });
+
+  // router.get("/user/:email", function(req, res) {
+  //   db.user.findAll({ where: { email: req.params.email } }).then(function(dbUser) {
+  //     console.log("--------------------------------------------------");
+  //     console.log(req.params.email);
+  //     res.render("user", {
+  //       user: dbUser
+  //     });
+  //   });
+  // });
+
+
+  // router.get("/odstats/:id", function(req, res) {
+  //   db.odstats.findOne({ where: { id: req.params.id } }).then(function(
+  //     dbStats
+  //   ) {
+  //     res.render("odstats", {
+  //       odstats: dbStats
+  //     });
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
-  router.get("*", function(req, res) {
-    res.render("404");
-  });
+  // router.get("*", function(req, res) {
+  //   res.render("404");
+  // });
 
 module.exports = router;
