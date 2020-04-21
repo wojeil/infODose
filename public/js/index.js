@@ -9,7 +9,7 @@ $(document).ready(function () {
         long = position.coords.longitude;
         console.log(lat + "and" + long);
 
-    });
+ 
 
     var policeStation = "police"
     //Query for google places
@@ -31,14 +31,13 @@ $(document).ready(function () {
         let policeCard =`<div class="card" style="width: 18rem;">
                 <img src="${data.icon}" class="card-img-top" alt="Icon Placeholder">
                 <div class="card-body">
-                    <h5 class="card-title">${data.icon}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">${data.name}</h6>
-                    <p class="card-text">${data.vicinity}</p>
+                    <h5 class="card-title">${data.name}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">${data.vicinity}</h6>
                 </div>
             </div>`;
 
         $("#police").append(policeCard);
         }
     })
-
+});
 });

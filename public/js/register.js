@@ -24,7 +24,7 @@ const handleSubmit = async (e) => {
         const data = await $.post("/auth/register", userObj)
         if (data) {
             await $.get("/auth/login", loginObj)
-            window.location.href = "/"
+            window.location.href = "/info"
         }
 
     } catch (err) {
