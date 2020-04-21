@@ -23,7 +23,6 @@ var db = require("../models");
       });
     });
   });
-<<<<<<< HEAD
 
   router.get("/user/:email", function(req, res) {
     db.user.findAll({ where: { email: req.params.email } }).then(function(dbUser) {
@@ -31,7 +30,7 @@ var db = require("../models");
       res.render("user", {
         user: dbUser
       });
-=======
+    });
   //html rout forgetting user to main page  for ---testing--- 
   router.get("/info", function(req, res) {
     // db.user.findAll({ where: { } }).then(function(dbUser) {
@@ -40,10 +39,8 @@ var db = require("../models");
       res.render("info", {
         // user: dbUser
       // });
->>>>>>> 7861425f33c53c65760880110ef0c86b493f7175
-    });
   });
-
+  });
   router.get("/user/register", function(req, res) {
     // db.user.findAll({ where: { } }).then(function(dbUser) {
     //   console.log("--------------------------------------------------");
