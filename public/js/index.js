@@ -59,8 +59,8 @@ $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
     var result,
     result = numOne*numTwo;
     let liStats= ` 
-    <h4>For the year ${data.Year} approxmiately ${Math.round(result)} deaths in the state ${data.State} that has a population
-    of ${data.Population} in ${data.County}</h4>
+    <h4>In ${data.Year} approximately ${Math.round(result)} deaths occurred in ${data.County} that has a population
+    of ${data.Population} in the state of ${data.State}</h4>
     
     <h3>Statistics</h3>
     <ul style='list-style:none'>
