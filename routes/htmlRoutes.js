@@ -14,13 +14,13 @@ const auth = require("../middleware/auth");
 var db = require("../models");
 
 
-// Load index page
-router.get("/", function (req, res) {
-  db.odstats.findAll({}).then(function (stats) {
-    res.render("index", {
-      msg: "Welcome!",
-      odstats: stats
-    });
+  // Load index page
+  router.get("/", function(req, res) {
+    //db.odstats.findAll({}).then(function(stats) {
+      res.render("index", {
+       // msg: "Welcome!",
+        //odstats: stats
+      //});
   });
 });
 
