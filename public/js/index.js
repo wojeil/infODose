@@ -41,5 +41,15 @@ $(document).ready(function () {
     })
 });
 
+//setting up get request from db
+
+$("#subButton").on("click", function(event){
+    $.ajax("/info",{
+        
+    })
+
+
+})
+
 
 });
