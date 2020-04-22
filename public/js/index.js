@@ -52,10 +52,9 @@ $(document).ready(function () {
         let county = $("#co").val().trim();
         let year = $("#yr").val().trim();
         //enter validation
-        if (state || county || year === null) {
-            alert("Please complete the search form like the examples provided below.")
-        }
-        else {
+        
+        
+        
             $.get("/api/info/" + state + "/" + county + "/" + year, function (data) {
                 let liStats = `
         <li><h3>Year: ${data.Year}</h3></li>
@@ -67,11 +66,12 @@ $(document).ready(function () {
         `
                 $(".infoStats").append(liStats)
             })
+        
             $("#st").val("")
             $("#co").val("")
             $("#yr").val("")
 
-        }
+        
 
 
     })
