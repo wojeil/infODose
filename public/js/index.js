@@ -47,18 +47,21 @@ $(document).ready(function () {
 
 $("#subButton").on("click", function(event){
     event.preventDefault();
-$(".infoStats").empty(); 
+//$(".infoStats").empty(); 
 let state = $("#st").val().trim();
 let county = $("#co").val().trim();
 let year = $("#yr").val().trim();
    
 $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
-    let liStats= `
-    <li><h3>Year: ${data.Year}</h3></li>
-    <li>${data.State}</li>
-    <li>${data.County}</li>
-    <li>${data.Population}</li>
-    <li>${data.DeathRate}</li>
+    let liStats= ` 
+    <li><h5>Year: ${data.Year}</h5></li>
+    <li><h5>State: ${data.State}</h5></li>
+    <li><h5>County: ${data.County}</h5></li>
+    <li><h5>Population: ${data.Population}</h5></li>
+    <li><h5>Death-rate: ${data.DeathRate}</h5></li>
+
+    For the year ${data.Year} there was ${data.DeathRate} deaths per 100,000 in the state ${data.State} that has a population
+    of ${data.Population} in the county of ${data.County}
     
     `
       $(".infoStats").append(liStats)   
