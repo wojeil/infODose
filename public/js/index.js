@@ -24,11 +24,11 @@ $(document).ready(function () {
         console.log(response);
 
         // loop for the five nearest location
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 3; i++) {
             let data = response.results[i];
             console.log(data);
            
-        let policeCard =`<div class="card" style="width: 18rem;">
+        let policeCard =`<div id="pdCard" class="card" style="width: 10rem;">
                 <img src="${data.icon}" class="card-img-top" alt="Icon Placeholder">
                 <div class="card-body">
                     <h5 class="card-title">${data.name}</h5>
