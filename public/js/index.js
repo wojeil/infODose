@@ -42,10 +42,15 @@ $(document).ready(function () {
 });
 
 //setting up get request from db
+//adding global var for get
+
 
 $("#subButton").on("click", function(event){
-    $.ajax("/info",{
-        
+let state = $("#st").val().trim().toLowerCase();
+let county = $("#co").val().trim().toLowerCase();
+let year = $("#yr").val().trim();
+    $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
+      console.log(data);      
     })
 
 
