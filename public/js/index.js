@@ -52,7 +52,12 @@ $("#subButton").on("click", function(event){
 let state = $("#st").val().trim();
 let county = $("#co").val().trim();
 let year = $("#yr").val().trim();
-   
+let divAlert= $("#warning");
+if(state == "" || county == "" || year == ""){
+ divAlert.text("Please fill out the forms completely");
+}
+else{
+divAlert.text("");
 $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
     var numOne = parseInt(data.DeathRate);
     var numTwo = parseInt(data.Population)/100000;
@@ -73,6 +78,7 @@ $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
     `
       $(".infoStats").append(liStats)
     })
+}
     $("#st").val("")
     $("#co").val("")
     $("#yr").val("")
