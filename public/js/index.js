@@ -36,8 +36,9 @@ $(document).ready(function () {
                 </div>
             </div>`;
 
-        $("#police").append(policeCard);
-        }
+
+                $("#police").append(policeCard);
+            }
     })
 });
 
