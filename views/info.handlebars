@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <a class="navbar-brand" href="/">Auth with Passport</a>
+    <a class="navbar-brand" href="/">InfODose</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -12,8 +12,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="/user/register">Register</a>
             </li>
-             <li class="nav-item">
-            <a class="btn text-right text-white mr-4 bg-white text-dark" href="/auth/logout">Logout</a>
+            <li class="nav-item navbar-right">
+                <a class="btn text-right text-white mr-4 bg-white text-dark" href="/auth/logout">Logout</a>
             </li>
         </ul>
     </div>
@@ -24,42 +24,47 @@
     <div class="row">
         {{!-- column1 --}}
         <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Search:</h3>
+                    <p>Please enter the correct information as stated</p>
+                    <p>in the examples below for correct results.</p>
+                    <form class="create-form">
 
-            <h3>Search:</h3>
-            <p>Please enter the correct information as stated</p>
-            <p>in the examples below for correct results.</p>
-            <form class="create-form">
+                        <div class="form-group">
+                            <label for="st">State:</label>
+                            <input type="text" id="st" name="name" placeholder="ex. Florida">
+                            <hr>
+                            <label for="co">County:</label>
+                            <input type="text" id="co" name="name" placeholder="ex. Orange County">
+                            <hr>
+                            <label for="yr">Year:</label>
+                            <input type="text" id="yr" name="name" placeholder="2003 - 2017 ex. 2003">
+                        </div>
 
-                <div class="form-group">
-                    <label for="st">State:</label>
-                    <input type="text" id="st" name="name" placeholder="ex. Florida">
-                    <hr>
-                    <label for="co">County:</label>
-                    <input type="text" id="co" name="name" placeholder="ex. Orange County">
-                    <hr>
-                    <label for="yr">Year:</label>
-                    <input type="text" id="yr" name="name" placeholder="2003 - 2017 ex. 2003">
+
+                        <button type="submit" id="subButton">Search</button>
+                    </form>
+
                 </div>
-
-
-                <button type="submit" id="subButton">Search</button>
-            </form>
-
+            </div>
         </div>
 
         {{!-- column2 --}}
 
         <div class="col-sm-5">
-          <ul class="infoStats">
 
-          </ul> 
-            
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nesciunt enim. Distinctio ratione et tempora
-            incidunt doloremque ut asperiores, quis, sunt iste quam cum esse magnam! Alias minima dolore dolores?
+          <ul class="infoStats"> </ul> 
+
+          
         </div>
         {{!-- column3 --}}
         <div class="col-sm-2">
-            Below is information for your local police departments
+            <div class="card">
+                <div class="card-body">
+                    Below is information for your local police departments
+                </div>
+            </div>
 
 
         </div>
@@ -88,21 +93,28 @@
             </div>
             {{!-- column2 --}}
             <div class="col-sm-5">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="https://static01.nyt.com/images/2020/04/13/upshot/13up-health-opioids1/merlin_165415239_a5691fb3-0a47-4b01-ad6d-b1171ca41194-jumbo.jpg?quality=90&auto=webp"
-                            class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">The Coronavirus Pandemic Has Made The Opioid Epidemic Even Worse</h5>
-                            <p class="card-text">Deaths from drug overdoses are likely to increase during the
-                                coronavirus outbreak because of disruption to recovery routines and access to treatment,
-                                according to counselors and people whose rehabilitation depends on daily care..</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                            <p class="card-text"><small class="text-muted">Reference:
-                                    https://www.buzzfeednews.com/article/otilliasteadman/coronavirus-opioids-overdoses</small>
-                            </p>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <img src="https://static01.nyt.com/images/2020/04/13/upshot/13up-health-opioids1/merlin_165415239_a5691fb3-0a47-4b01-ad6d-b1171ca41194-jumbo.jpg?quality=90&auto=webp"
+                                    class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">The Coronavirus Pandemic Has Made The Opioid Epidemic Even
+                                        Worse</h5>
+                                    <p class="card-text">Deaths from drug overdoses are likely to increase during the
+                                        coronavirus outbreak because of disruption to recovery routines and access to
+                                        treatment,
+                                        according to counselors and people whose rehabilitation depends on daily care..
+                                    </p>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <p class="card-text"><small class="text-muted">Reference:
+                                            https://www.buzzfeednews.com/article/otilliasteadman/coronavirus-opioids-overdoses</small>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
