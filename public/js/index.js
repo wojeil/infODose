@@ -46,13 +46,26 @@ $(document).ready(function () {
 
 
 $("#subButton").on("click", function(event){
-let state = $("#st").val().trim().toLowerCase();
-let county = $("#co").val().trim().toLowerCase();
+    event.preventDefault();
+$(".infoStats").empty(); 
+let state = $("#st").val().trim();
+let county = $("#co").val().trim();
 let year = $("#yr").val().trim();
-    $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
-      console.log(data);      
+   
+$.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
+    let liStats= `
+    <li><h3>Year: ${data.Year}</h3></li>
+    <li>${data.State}</li>
+    <li>${data.County}</li>
+    <li>${data.Population}</li>
+    <li>${data.DeathRate}</li>
+    
+    `
+      $(".infoStats").append(liStats)   
     })
-
+    $("#st").val("")
+    $("#co").val("")
+    $("#yr").val("")
 
 })
 
