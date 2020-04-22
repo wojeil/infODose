@@ -5,14 +5,18 @@ const db = require("../models");
 // // route: /api
 router.get("/info/:state/:county/:year", (req, res) => {
     //your code here
+    console.log(req.params.state);
+    console.log(req.params.county);
+    console.log(req.params.year);
     db.odstats.findOne({
         where: {
-            State:req.params.state,
-            County:req.params.county,
-            Year:req.params.year,
+            state:req.params.state,
+            county:req.params.county,
+            year:req.params.year
         }
     }).then(function(dbstats){
         res.json(dbstats);
+      
     });
 
 });
