@@ -1,3 +1,13 @@
 #pdCard{
     margin-bottom: 10px;
 }
+body {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 16px;
+   background-color: oldlace;
+}
+.navbar-brand {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-stretch: ultra-expanded;
+}
