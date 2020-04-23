@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  
+  
   $.get("/api/allreports", function (reportdata) {
     console.log(reportdata)
     for (var i = 0; i < reportdata.length; i++) { 
@@ -9,7 +11,9 @@ $(document).ready(function () {
         <h5 class="card-title">${reportdata[i].organization}</h5>
         <p class="card-text">Report:${reportdata[i].report}</p>
       </div>
+      
     </div>
+    <button id="deleteButton" data-id="${reportdata[i].id}"> Delete </button>
   `;
  
 
@@ -17,8 +21,8 @@ $(document).ready(function () {
 
   }
 });
-    
-    
+  
+
     
     
   $("#reportButton").on("click", function (event) {
@@ -34,23 +38,27 @@ $(document).ready(function () {
       }
       $.post("/api/newreport", reported, function () {
         window.location.reload()
+        
       })
     })
   
   });
-});
 
-$(".deleteBtn").on("submit",function (event){
+$("#deleteButton").on("click",function (event){
   event.preventDefault();
-  var id = $(this).data("id");
+  console.log("is clicking");
+  var id = $("#deleteButton").data("id");
 
   $.ajax({
     method: "DELETE",
-    url: "/api/report/" + id
+    url: "/api/deletereport/" + id
   })
     .then(function() {
+      window.location.reload()
      
     });
 
 
-})
+});
+
+});
