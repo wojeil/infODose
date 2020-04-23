@@ -5,22 +5,28 @@ body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 16px;
    background-color: rgb(9, 72, 155);
+   background-image: url("../images/cssinfoimage.jpg");
+   color: black;
+   font-weight: bolder;
+   text-align: center;
 }
 .navbar-brand {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
-    font-stretch: ultra-expanded;
-    color:  lightgray;
+    font-size: 40px;
     /* color: rgb(255, 255, 0); */
  
 }
+.navbar-dark .navbar-brand {
+    color: black;
+    font: large;
+    text-align: center;
+}
 .navbarC {
-    background-color: rgba(4, 26, 54, 0.87);
-    color: rgb(190, 190, 17);
+    background-image: url(../images/browntexture.jpg);
 }
 
 #navbarInfo {
-    background-image: url("../images/cssinfoimage.jpg");
+    background-image: url("../images/textured-gray.jpg");
 }
 #warning {
     background-color: red;
@@ -30,22 +36,25 @@ body {
 .card {
 
     border-width: 2px;
-    border-color: black;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
-=======
     margin-bottom: 10px;
->>>>>>> 5428ccbb8587e59f32a16c8301805562aee40740
-=======
-    margin-bottom: 10px;
-    background-color: lightgray;
+    background-image: url(../images/whitespots.jpg);
+    color: black;
     
-
 }
->>>>>>> 659c87100c529055010ebf0ada9ab40dace7e974
 
 #loginDiv {
     color: whitesmoke;
+}
+.text-muted {
+    color: black !important;
+    font-weight: bolder;
+}
+
+
+h5 {
+    font-weight: bolder;
+}
+h3 {
+    font-size: 20px;
+    font-weight: bolder;
 }
