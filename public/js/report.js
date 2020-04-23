@@ -13,3 +13,18 @@ $(document).ready(function () {
   
     });
   });
+
+$(".deleteBtn").on("submit",function (event){
+  event.preventDefault();
+var id = $(this).data("id");
+
+  $.ajax({
+    method: "DELETE",
+    url: "/api/reports/" + id
+  })
+    .then(function() {
+     
+    });
+
+
+})

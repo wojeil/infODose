@@ -85,5 +85,9 @@ $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
 
 })
 
+//post request
+//put request
+//delete request
+//get request 
 
 });
