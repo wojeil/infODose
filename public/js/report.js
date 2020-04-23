@@ -20,7 +20,7 @@ var id = $(this).data("id");
 
   $.ajax({
     method: "DELETE",
-    url: "/api/reports/" + id
+    url: "/api/report/" + id
   })
     .then(function() {
      
