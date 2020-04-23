@@ -4,11 +4,13 @@ $(document).ready(function () {
     for (var i = 0; i < reportdata.length; i++) { 
       
      var allReports = `
-
-      <p> ${reportdata[i].organization} </p>
-      <p> ${reportdata[i].report} </p>
-  
-      `;
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">${reportdata[i].organization}</h5>
+        <p class="card-text">Report:${reportdata[i].report}</p>
+      </div>
+    </div>
+  `;
  
 
     $(".fullReports").append(allReports);
