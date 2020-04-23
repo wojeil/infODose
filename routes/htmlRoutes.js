@@ -6,7 +6,7 @@ const auth = require("../middleware/auth");
 // user authorized views
 router.get("/", auth, (req, res) => res.render("login"));
 //router.get("/user/info", auth, (req, res) => res.render("info"));
-//router.get("/user/profile", auth, (req, res) => res.sendFile(path.join(__dirname, "../public/profile.html")));
+router.get("/report", auth, (req, res) => res.render("report"));
 
 // login and register forms view
 router.get("/user/login", (req, res) => res.render("login"));
