@@ -1,48 +1,42 @@
-  <nav class="navbar navbar-expand-lg mb-4 " id="navbarLogin">
-        <a class="navbar-brand" href="/">InfODose</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link text-primary" href="/user/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/user/register">Register</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
-
-    <div class="container mt-4" >
-        <div class="row">
-            <div class="col-md-4 mx-auto" id="loginDiv">
-                <h1 class="text-center">Log In</h1>
-                <form class="alertAppend">
-                    <div class="form-group">
-                        <label for="emailInput">Email address</label>
-                        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-group">
-                        <label for="passwordInput">Password</label>
-                        <input type="password" class="form-control" id="passwordInput">
-                    </div>
-                    <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
-                    <small class="form-text text-muted">Not Registered Yet..? <a
-                            href="/user/register">Register</a></small>
-                </form>
-            </div>
+<nav class="navbar navbar-expand-sm navbar-dark navbarLogin">
+    <span class="navbar-brand" href="/">InfODose</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link text-primary" href="/user/login">Login</a>
+            <a class="nav-item nav-link" href="/user/register">Register</a>
         </div>
     </div>
+</nav>
+
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto" id="loginDiv">
+            <h1 class="text-center">Log In</h1>
+            <form class="alertAppend">
+                <div class="form-group">
+                    <label for="emailInput">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput">Password</label>
+                    <input type="password" class="form-control" id="passwordInput">
+                </div>
+                <button id="submitBtn" type="submit" class="btn btn-primary">Submit</button>
+                <small class="form-text text-muted">Not Registered Yet..? <a href="/user/register">Register</a></small>
+            </form>
+        </div>
+    </div>
+</div>
 
 <p style="text-align:center;">
-<iframe width="420" height="315" align="middle"
-src="https://www.youtube.com/embed/s4LV0tBZncI?controls=0">
-</iframe>
+    <iframe width="420" height="315" align="middle" src="https://www.youtube.com/embed/s4LV0tBZncI?controls=0">
+    </iframe>
 </p>
 
-   <script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
