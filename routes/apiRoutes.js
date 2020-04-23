@@ -21,4 +21,30 @@ router.get("/info/:state/:county/:year", (req, res) => {
 
 });
 
+//route for posting new form 
+//route for updating form
+//rout for deleting form
+router.delete("/api/report/:id", function(req, res) {
+    db.Report.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbReport) {
+      res.json(dbReport);
+      window.location.reload()
+    });
+  });
+
+router.post("/api/newreport", (res, req)=>{
+  db.Report.create({
+    email: Report.email,
+    organization: Report.organization,
+    report: Report.report,
+  })
+  .then(dbReport=>{
+    res.send(dbReport)
+  })
+})
+
+
 module.exports = router;
