@@ -1,13 +1,17 @@
 $(document).ready(function () {
+    $.get("/api/allreports", function (data) {
+        console.log(data)
+        });
     $(".submitBTN").on("submit", function (event) {
       event.preventDefault();
-      $.get("/report", function (data) {
+      $.get("/auth/user", function (data) {
         const reported = {
-          name: $("#email").val().trim(),
-          organization: $("#").val().trim(),
-
+          organization: $("#organization").val().trim(),
+          report: $("#report").val().trim(),
+            UserId: data.id
         }
-        $.post("/api/report", reported, function () {
+        $.post("/api/newreport", reported, function () {
+            window.location.reload()
         })
       })
   
