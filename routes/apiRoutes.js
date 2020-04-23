@@ -35,7 +35,16 @@ router.delete("/api/report/:id", function(req, res) {
     });
   });
 
-//route for seeing forms db
+router.post("/api/newreport", (res, req)=>{
+  db.Report.create({
+    email: Report.email,
+    organization: Report.organization,
+    report: Report.report,
+  })
+  .then(dbReport=>{
+    res.send(dbReport)
+  })
+})
 
 
 module.exports = router;
