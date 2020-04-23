@@ -4,12 +4,23 @@
 body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 16px;
-   background-color: oldlace;
+   background-color: rgb(9, 72, 155);
 }
 .navbar-brand {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
     font-stretch: ultra-expanded;
+    color:  lightgray;
+    /* color: rgb(255, 255, 0); */
+ 
+}
+.navbarC {
+    background-color: rgba(4, 26, 54, 0.87);
+    color: rgb(190, 190, 17);
+}
+
+#navbarInfo {
+    background-image: url("../images/cssinfoimage.jpg");
 }
 #warning {
     background-color: red;
@@ -20,8 +31,12 @@ body {
 
     border-width: 2px;
     border-color: black;
-    
-=======
     margin-bottom: 10px;
+    background-color: lightgray;
+    
 
+}
+
+#loginDiv {
+    color: whitesmoke;
 }
