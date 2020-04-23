@@ -16,7 +16,14 @@ body {
     color: white;
 }
 .card {
+
     border-width: 2px;
     border-color: black;
+<<<<<<< HEAD
+=======
+    
+=======
+    margin-bottom: 10px;
+>>>>>>> 5428ccbb8587e59f32a16c8301805562aee40740
 
 }
