@@ -21,10 +21,10 @@ router.get("/info/:state/:county/:year", (req, res) => {
 
 });
 
-//route for posting new form 
+
 //route for updating form
 //rout for deleting form
-router.delete("/api/report/:id", function(req, res) {
+router.delete("/report/:id", function(req, res) {
     db.Report.destroy({
       where: {
         id: req.params.id
@@ -34,17 +34,31 @@ router.delete("/api/report/:id", function(req, res) {
       window.location.reload()
     });
   });
-
-router.post("/api/newreport", (res, req)=>{
+//route for posting new form 
+router.post("/newreport", (req, res)=>{
+console.log("posting to report table");
+console.log(req.body);
   db.Report.create({
-    email: Report.email,
-    organization: Report.organization,
-    report: Report.report,
+    organization: req.body.organization,
+    report: req.body.report,
+    UserId: req.body.UserId
+
   })
   .then(dbReport=>{
     res.send(dbReport)
   })
 })
+//rout for showing info (Get)
+router.get("/allreports", (req, res) => {
+    //your code here
+  
+    db.Report.findAll({
+        limit: 10
+    }).then(function(dbreports){
+        
+        res.json(dbreports);
+      
+    });
 
-
+});
 module.exports = router;
