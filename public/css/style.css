@@ -16,5 +16,11 @@ body {
     color: white;
 }
 .card {
+
+    border-width: 2px;
+    border-color: black;
+    
+=======
     margin-bottom: 10px;
+
 }
