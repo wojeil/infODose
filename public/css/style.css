@@ -1,7 +1,14 @@
 #pdCard{
-    margin-bottom: 10px;
-    border-radius: 0 0 0 0 !important;
     
+    border-radius: 0 0 0 0 !important;
+    margin-right: 10px;
+    float: right;
+    
+}
+.card-img-top {
+    position: sticky;
+    width: 30px;
+
 }
 body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -10,6 +17,10 @@ body {
    color: black;
    font-weight: bolder;
    text-align: center;
+   
+}
+nav {
+    margin-bottom: 100px;
 }
 .navbar-brand {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,6 +57,7 @@ body {
     background-color: rgba(204, 8, 8, 0.411);
     color: black;
     width: 200px;
+    border-radius: 8px;
 }
 .card {
 
@@ -81,6 +93,15 @@ a {
 .reportForms {
     margin-top: 10px;
 }
+
 #card-title {
     border-radius: 0 0 150px 150px !important;
+
+#od {
+    width: 200px;
+   border-radius: 8px;
+}
+
+iframe {
+    border-radius: 8px;
 }
