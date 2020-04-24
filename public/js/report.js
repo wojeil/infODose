@@ -6,6 +6,7 @@ $(document).ready(function () {
     for (var i = 0; i < reportdata.length; i++) { 
       
      var allReports = `
+    <form>
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">${reportdata[i].organization}</h5>
@@ -13,7 +14,8 @@ $(document).ready(function () {
       </div>
       
     </div>
-    <button id="deleteButton" data-id="${reportdata[i].id}"> Delete </button>
+    <button class="deleteButton" data-id="${reportdata[i].id}"> Delete </button>
+    <form>
   `;
  
 
@@ -44,17 +46,20 @@ $(document).ready(function () {
   
   });
 
-$("#deleteButton").on("click",function (event){
+  $(document).on('click', '.deleteButton', function(event){
   event.preventDefault();
-  console.log("is clicking");
-  var id = $("#deleteButton").data("id");
+
+  var id = $(this).data("id");
+  console.log("is clicking", id);
 
   $.ajax({
     method: "DELETE",
-    url: "/api/deletereport/" + id
+    url: "/api/report/" + id
   })
     .then(function() {
       window.location.reload()
+      
+   
      
     });
 

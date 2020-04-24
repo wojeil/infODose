@@ -24,14 +24,14 @@ router.get("/info/:state/:county/:year", (req, res) => {
 
 //route for updating form
 //rout for deleting form
-router.delete("/deletereport/:id", function(req, res) {
+router.delete("/report/:id", function(req, res) {
     console.log(req.params.id);
     db.Report.destroy({
       where: {
         id: req.params.id
       }
-    }).then(function(dbReport) {
-      res.json(dbReport);
+    }).then(function(dbreport) {
+      res.json(dbreport);
    
     });
   });
