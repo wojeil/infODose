@@ -24,11 +24,11 @@ $(document).ready(function () {
         console.log(response);
 
         // loop for the five nearest location
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 8; i++) {
             let data = response.results[i];
             console.log(data);
            
-        let policeCard =`<div id="pdCard" class="card" style="width: 10rem;">
+        let policeCard =`<div id="pdCard" class="card" style="width: 12rem;">
                 <img src="${data.icon}" class="card-img-top" alt="Icon Placeholder">
                 <div class="card-body">
                     <h5 class="card-title">${data.name}</h5>
@@ -63,7 +63,9 @@ $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
     var numTwo = parseInt(data.Population)/100000;
     var result,
     result = numOne*numTwo;
-    let liStats= ` 
+    let liStats= 
+    `<div class="card container"> 
+    <div class="card-body">
     <h4>In ${data.Year} approximately ${Math.round(result)} deaths occurred in ${data.County} that has a population
     of ${data.Population} in the state of ${data.State}</h4>
     
@@ -75,6 +77,8 @@ $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
     <li><p>Population: ${data.Population}</p></li>
     <li><p>Death-rate: ${data.DeathRate}</p></li>
     </ul>
+    </div>
+    </div>
     `
       $(".infoStats").append(liStats)
     })
