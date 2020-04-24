@@ -34,9 +34,9 @@ body {
     
 }
 #warning {
-    background-color: red;
-    color: white;
-    width: 30px;
+    background-color: rgba(204, 8, 8, 0.411);
+    color: black;
+    width: 200px;
 }
 .card {
 
@@ -66,4 +66,8 @@ h3 {
 }
 a {
     color: black;
+}
+
+.reportForms {
+    margin-top: 10px;
 }

@@ -6,8 +6,8 @@ $(document).ready(function () {
     for (var i = 0; i < reportdata.length; i++) { 
       
      var allReports = `
-    <form>
-    <div class="card">
+    <form class="reportForms">
+    <div class="card container">
       <div class="card-body">
         <h5 class="card-title">${reportdata[i].organization}</h5>
         <p class="card-text">Report:${reportdata[i].report}</p>

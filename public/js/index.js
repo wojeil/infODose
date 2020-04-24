@@ -54,7 +54,7 @@ let county = $("#co").val().trim();
 let year = $("#yr").val().trim();
 let divAlert= $("#warning");
 if(state == "" || county == "" || year == ""){
- divAlert.text("Please fill out the forms completely");
+ divAlert.text(" Error: Do not leave forms blank.");
 }
 else{
 divAlert.text("");
