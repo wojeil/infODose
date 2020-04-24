@@ -14,7 +14,7 @@ $(document).ready(function () {
     var policeStation = "police"
     //Query for google places
 
-    const queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius=8000&keyword=" + policeStation + "&key=AIzaSyAHOQKkfyQvRri-GzRByO3UPvP63mil_wU"
+    const queryURL = "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + lat + "," + long + "&radius=8000&keyword=" + policeStation + "&key=AIzaSyAmPjAX8KB1TbR5I0u2SVlyuVQsVjsMY9g"
 
 
     $.ajax({

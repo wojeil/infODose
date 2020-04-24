@@ -96,7 +96,7 @@ a {
 
 #card-title {
     border-radius: 0 0 150px 150px !important;
-
+}
 #od {
     width: 200px;
    border-radius: 8px;
@@ -104,4 +104,12 @@ a {
 
 iframe {
     border-radius: 8px;
+}
+
+#footerLogin {
+    margin-top: 275px;
+}
+
+#footerRegister {
+    margin-top: 275px;
 }
