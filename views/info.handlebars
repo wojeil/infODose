@@ -21,32 +21,36 @@
             {{!-- sub row1 --}}
             <div class="row">
                 {{!-- form  col--}}
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h3>Search:</h3>
-                            <p>Please fill in the blanks as stated</p>
-                            <p>in the examples below for results.</p>
-                            <form class="create-form">
-                                <div class="form-group" class="rounded">
-                                    <label for="st">State:</label>
-                                    <input type="text" id="st" name="name" placeholder="ex. Florida">
-                                    <hr>
-                                    <label for="co">County:</label>
-                                    <input type="text" id="co" name="name" placeholder="ex. Orange County">
-                                    <hr>
-                                    <label for="yr">Year:</label>
-                                    <input type="text" id="yr" name="name" placeholder="2003 - 2017 ex. 2003">
-                                    <div id="warning"></div>
-                                </div>
-                                <button type="submit" id="subButton">Search</button>
-                            </form>
+                <div class="col-sm-6" class="searchbar">
+                    <div id="card-search">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3>Search:</h3>
+                                <p>Please fill in the blanks as stated</p>
+                                <p>in the examples below for results.</p>
+                                <form class="create-form">
+                                    <div class="form-group" class="rounded">
+                                        <label for="st">State:</label>
+                                        <input type="text" id="st" name="name" placeholder="ex. Florida">
+                                        <hr>
+                                        <label for="co">County:</label>
+                                        <input type="text" id="co" name="name" placeholder="ex. Orange County">
+                                        <hr>
+                                        <label for="yr">Year:</label>
+                                        <input type="text" id="yr" name="name" placeholder="2003 - 2017 ex. 2003">
+                                        <div id="warning"></div>
+                                    </div>
+                                    <button type="submit" id="subButton">Search</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
                 {{!-- result col --}}
                 <div class="col-sm-6">
-                    <div class="infoStats">
+                    <div class="card" "card-search">
+                        <div class="infoStats">
+                        </div>
                     </div>
                 </div>
 
@@ -79,7 +83,7 @@
                     {{!-- minisubrow 2 --}}
                     <div class="row">
                         <div class="col-sm">
-                            <div class="card" >
+                            <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Helpful Resources</h5>
                                     <p class="card-text">These are some websites with more information about our current
@@ -114,7 +118,7 @@
                 </div>
                 {{!-- news col --}}
                 <div class="col-sm-6">
-                    <div class="card">
+                    <div class="card"  id="card-title">
                         <div class="card-body">
                             <div class="row no-gutters">
                                 <div class="col">

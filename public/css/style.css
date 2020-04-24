@@ -1,5 +1,7 @@
 #pdCard{
     margin-bottom: 10px;
+    border-radius: 0 0 0 0 !important;
+    
 }
 body {
    font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -33,6 +35,13 @@ body {
 
     
 }
+.page-footer {
+    position: absolute;
+    width: 100%;
+    color: black;
+    font-weight: normal !important;
+
+}
 #warning {
     background-color: rgba(204, 8, 8, 0.411);
     color: black;
@@ -42,6 +51,7 @@ body {
 
     border-width: 2px;
     border-color: black;
+    border-radius: 0 0 80px 80px;
     margin-bottom: 10px;
     background-image: url(../images/whitespots.jpg);
     color: black;
@@ -70,4 +80,7 @@ a {
 
 .reportForms {
     margin-top: 10px;
+}
+#card-title {
+    border-radius: 0 0 150px 150px !important;
 }
