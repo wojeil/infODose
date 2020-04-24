@@ -1,0 +1,115 @@
+#pdCard{
+    
+    border-radius: 0 0 0 0 !important;
+    margin-right: 10px;
+    float: right;
+    
+}
+.card-img-top {
+    position: sticky;
+    width: 30px;
+
+}
+body {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 16px;
+   background-image: url("../images/cssinfoimage.jpg");
+   color: black;
+   font-weight: bolder;
+   text-align: center;
+   
+}
+nav {
+    margin-bottom: 100px;
+}
+.navbar-brand {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    /* color: rgb(255, 255, 0); */
+ 
+}
+.navbar-dark .navbar-brand {
+    color: black;
+    font: large;
+    text-align: center;
+}
+.navlink {
+    color: black;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-brand {
+    color: black;
+    font: large;
+
+    
+}
+.page-footer {
+    position: absolute;
+    width: 100%;
+    color: black;
+    font-weight: normal !important;
+
+}
+#warning {
+    background-color: rgba(204, 8, 8, 0.411);
+    color: black;
+    width: 200px;
+    border-radius: 8px;
+}
+.card {
+
+    border-width: 2px;
+    border-color: black;
+    border-radius: 0 0 80px 80px;
+    margin-bottom: 10px;
+    background-image: url(../images/whitespots.jpg);
+    color: black;
+    
+}
+
+#loginDiv {
+    color: black;
+}
+.text-muted {
+    color: black !important;
+    font-weight: bolder;
+}
+
+
+h5 {
+    font-weight: bolder;
+}
+h3 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+a {
+    color: black;
+}
+
+.reportForms {
+    margin-top: 10px;
+}
+
+#card-title {
+    border-radius: 0 0 150px 150px !important;
+}
+#od {
+    width: 200px;
+   border-radius: 8px;
+}
+
+iframe {
+    border-radius: 8px;
+}
+
+#footerLogin {
+    margin-top: 275px;
+}
+
+#footerRegister {
+    margin-top: 275px;
+}
