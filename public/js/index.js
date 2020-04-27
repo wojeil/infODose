@@ -59,34 +59,38 @@ if(state == "" || county == "" || year == ""){
 else{
 divAlert.text("");
 $.get("/api/info/"+state+ "/"+county+"/"+year, function(data){
-    var numOne = parseInt(data.DeathRate);
-    var numTwo = parseInt(data.Population)/100000;
-    var result,
-    result = numOne*numTwo;
-    let liStats= 
-    `<div class="card container"> 
-    <div class="card-body">
-    <h4>In ${data.Year} approximately ${Math.round(result)} deaths occurred in ${data.County} that has a population
-    of ${data.Population} in the state of ${data.State}</h4>
-    
-    <h3>Statistics</h3>
-    <ul style='list-style:none'>
-    <li><p>Year: ${data.Year}</p></li>
-    <li><p>State: ${data.State}</p></li>
-    <li><p>County: ${data.County}</p></li>
-    <li><p>Population: ${data.Population}</p></li>
-    <li><p>Death-rate: ${data.DeathRate}</p></li>
-    </ul>
-    </div>
-    </div>
-    `
-      $(".infoStats").append(liStats)
+    if(!data) {
+        divAlert.text(" Error: Invalid Entry. Please Try Again.");
+    }
+    else{
+        divAlert.text("");
+        var numOne = parseInt(data.DeathRate);
+        var numTwo = parseInt(data.Population)/100000;
+        var result,
+        result = numOne*numTwo;
+        let liStats= 
+        `<div class="card container"> 
+        <div class="card-body">
+        <h4>In ${data.Year} approximately ${Math.round(result)} deaths occurred in ${data.County} that has a population
+        of ${data.Population} in the state of ${data.State}</h4>
+        <h3>Statistics</h3>
+        <ul style='list-style:none'>
+        <li><p>Year: ${data.Year}</p></li>
+        <li><p>State: ${data.State}</p></li>
+        <li><p>County: ${data.County}</p></li>
+        <li><p>Population: ${data.Population}</p></li>
+        <li><p>Death-rate: ${data.DeathRate}</p></li>
+        </ul>
+        </div>
+        </div>
+        `
+          $(".infoStats").append(liStats)
+    }
     })
 }
     $("#st").val("")
     $("#co").val("")
     $("#yr").val("")
-
 })
 
 //post request
