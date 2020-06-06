@@ -5,7 +5,8 @@ $(document).ready(function () {
     console.log(reportdata)
     for (var i = 0; i < reportdata.length; i++) { 
       
-     var allReports = `
+     var allReports = 
+    `
     <form class="reportForms">
     <div class="card container">
       <div class="card-body">
